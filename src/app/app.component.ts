@@ -1,26 +1,18 @@
-import { Component } from '@angular/core';
-import { importScripts } from './shared/load-scripts';
+import {Component} from '@angular/core';
+import {importScript} from './shared/load-scripts';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.sass']
+  template: '<qrvey-end-user settings="config"></qrvey-end-user>'
 })
 export class AppComponent {
-  title = 'qrvey-angular';
+  constructor() {
+    importScript('//421850935145sandboxqrveywidgets.s3.amazonaws.com/widgets-launcher/app.js');
 
-  constructor(){
-    // Step 3. Store widget config in windows object. This is the string located in the settings object of the widget ...settings="config"... 
     (window as any).config = {
-      apikey: "DOCUMENTATION_DEMO_API_KEY",
-      domain: "https://sandbox.qrveyapp.com", 
-      app_id: "H2UuWJeIp",
-      userid: "ZreovaM",
-      // pageid: "MIiDVNmXN"
-    }
-
-    // Step 2.2. Using load js script files script. 
-    importScripts(['//421850935145sandboxqrveywidgets.s3.amazonaws.com/widgets-launcher/app.js']);    
+      domain: 'https://sandbox.qrveyapp.com',
+      appid: 'H2UuWJeIp',
+      apikey: 'TlyeWkQ5tH4m05r3WXUqc9ILayESPlhd6hJaCut0',
+    };
   }
-
 }
