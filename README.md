@@ -11,7 +11,6 @@ In this repository we are giving instructions to use the **qrvey-end-user** comp
 ## Table of contents
 
 * [Installation](#installation)
-* [Creating End User Component](#creating-end-user-component)
 * [Using End User](#using-end-user)
 * [Demo](#demo)
 * [Troubleshooting](#troubleshooting)
